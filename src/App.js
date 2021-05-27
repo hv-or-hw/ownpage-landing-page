@@ -26,7 +26,7 @@ function App() {
         <Route exact path="/" component={HomePage} />
         <Route path="/faq" component={FaqPage} />
         <Route path="/contact" component={ContactPage} />
-        <Footer />
+        <Footer logoSrc="/logo-tmp.png" />
       </Router>
     </div>
   );
