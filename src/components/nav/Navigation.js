@@ -21,10 +21,6 @@ const NavigationWrapper = styled(Wrapper)`
   align-items: center;
   box-sizing: border-box;
   position: relative;
-
-  @media (${query.mobile}) {
-    padding: 0 16px;
-  }
 `;
 
 const Logo = styled.img`

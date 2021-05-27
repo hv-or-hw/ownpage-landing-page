@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import FaqPage from "./components/faq/FaqPage";
 import Footer from "./components/footer/Footer";
 import HomePage from "./components/home/HomePage";
 import Navigation from "./components/nav/Navigation";
@@ -22,7 +23,7 @@ function App() {
       <Router>
         <Navigation logoSrc="/logo-tmp.png" links={links} />
         <Route exact path="/" component={HomePage} />
-        <Route path="/faq" />
+        <Route path="/faq" component={FaqPage} />
         <Footer />
       </Router>
     </div>
