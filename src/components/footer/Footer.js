@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import footerData from "../../data/footer.json";
+import { query } from "../../utils/media-query";
 import Wrapper from "../common/Wrapper";
 
 const FooterBlock = styled.footer`
@@ -9,12 +10,20 @@ const FooterBlock = styled.footer`
 
   font-size: 12px;
   color: rgba(0, 0, 0, 0.3);
+
+  @media (${query.mobile}) {
+    padding: 20px 0 40px;
+  }
 `;
 const FooterLogo = styled.img`
   height: 20px;
   background-color: #333;
   padding: 8px;
   margin-bottom: 22px;
+
+  @media (${query.mobile}) {
+    margin-bottom: 12px;
+  }
 `;
 
 const CompanyInfoBlock = styled.section`
