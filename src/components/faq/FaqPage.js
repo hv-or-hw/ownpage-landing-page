@@ -7,6 +7,8 @@ import faq from "../../data/faq.json";
 import { query } from "../../utils/media-query";
 
 const FaqPageBlock = styled.main`
+  padding-bottom: 120px;
+
   @media (${query.mobile}) {
     padding-bottom: 80px;
   }
