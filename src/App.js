@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import ContactPage from "./components/contact/ContactPage";
 import FaqPage from "./components/faq/FaqPage";
 import Footer from "./components/footer/Footer";
 import HomePage from "./components/home/HomePage";
@@ -24,6 +25,7 @@ function App() {
         <Navigation logoSrc="/logo-tmp.png" links={links} />
         <Route exact path="/" component={HomePage} />
         <Route path="/faq" component={FaqPage} />
+        <Route path="/contact" component={ContactPage} />
         <Footer />
       </Router>
     </div>
