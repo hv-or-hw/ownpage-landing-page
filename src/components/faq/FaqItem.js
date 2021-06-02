@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useCallback, useRef, useState } from "react";
 import styled from "styled-components";
 import { query } from "../../utils/media-query";
 
@@ -8,8 +8,8 @@ const FaqItemBlock = styled.li`
   }
 
   &:not(.active) > p {
-    height: 0;
-    padding: 0;
+    padding-top: 0;
+    padding-bottom: 0;
     border: 0;
   }
 `;
@@ -24,7 +24,6 @@ const FaqItemTitle = styled.h2`
   }
 `;
 const FaqItemContent = styled.p`
-  box-sizing: border-box;
   margin: 0;
   padding: 16px;
   font-size: 16px;
@@ -34,6 +33,9 @@ const FaqItemContent = styled.p`
   background-color: #fafafc;
   overflow: hidden;
 
+  max-height: 0;
+  transition: max-height 0.5s, padding 0.5s;
+
   @media (${query.mobile}) {
     padding: 16px 4px;
   }
@@ -42,13 +44,23 @@ const FaqItemContent = styled.p`
 function FaqItem({ title, content, initActive = false }) {
   const [isActive, setActive] = useState(initActive);
 
+  const refItem = useRef();
+
+  const onClick = useCallback(() => {
+    const panel = refItem.current;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+
+    setActive(!isActive);
+  }, [refItem, isActive]);
+
   return (
-    <FaqItemBlock
-      className={isActive ? "active" : ""}
-      onClick={() => setActive(!isActive)}
-    >
+    <FaqItemBlock className={isActive ? "active" : ""} onClick={onClick}>
       <FaqItemTitle>{title}</FaqItemTitle>
-      <FaqItemContent>{content}</FaqItemContent>
+      <FaqItemContent ref={refItem}>{content}</FaqItemContent>
     </FaqItemBlock>
   );
 }
