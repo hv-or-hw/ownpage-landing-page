@@ -5,6 +5,10 @@ import { query } from "../../utils/media-query";
 import Wrapper from "../common/Wrapper";
 
 const NavigationBlock = styled.nav`
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+
   height: 80px;
   box-shadow: 0 1px 2px 0 rgba(41, 42, 43, 0.1);
 
