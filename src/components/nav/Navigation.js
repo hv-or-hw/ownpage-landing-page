@@ -29,7 +29,6 @@ const NavigationWrapper = styled(Wrapper)`
 `;
 
 const Logo = styled.img`
-  background-color: #333;
   padding: 8px;
   height: 36px;
   display: block;

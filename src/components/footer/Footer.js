@@ -17,7 +17,6 @@ const FooterBlock = styled.footer`
 `;
 const FooterLogo = styled.img`
   height: 20px;
-  background-color: #333;
   padding: 8px;
   margin-bottom: 22px;
 

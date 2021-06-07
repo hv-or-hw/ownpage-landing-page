@@ -28,12 +28,12 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Navigation logoSrc="/logo-tmp.png" links={links} />
+        <Navigation logoSrc="/assets/images/logo.png" links={links} />
         <Route exact path="/" component={HomePage} />
         <Route path="/partner" component={PartnerPage} />
         <Route path="/faq" component={FaqPage} />
         <Route path="/contact" component={ContactPage} />
-        <Footer logoSrc="/logo-tmp.png" />
+        <Footer logoSrc="/assets/images/footer-logo.png" />
       </Router>
     </div>
   );
