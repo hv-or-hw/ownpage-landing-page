@@ -68,6 +68,10 @@ const MenuItem = styled(NavLink)`
   padding: 12px;
   border-radius: 8px;
 
+  &:hover {
+    font-weight: bolder;
+  }
+
   @media (${query.mobile}) {
     display: block;
     margin: 16px auto;
@@ -81,6 +85,10 @@ const MenuItem = styled(NavLink)`
     color: white;
     background-color: #3dc277;
     font-weight: bold;
+
+    &:hover {
+      background-color: #2b8f56;
+    }
   }
 
   & + & {
