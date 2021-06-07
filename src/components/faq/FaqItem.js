@@ -12,12 +12,20 @@ const FaqItemBlock = styled.li`
     padding-bottom: 0;
     border: 0;
   }
+
+  &.active > h2 {
+    color: #3dc277;
+  }
 `;
 const FaqItemTitle = styled.h2`
   box-sizing: border-box;
   margin: 0;
   padding: 26px 12px;
   font-size: 18px;
+
+  &:hover {
+    color: #3dc277;
+  }
 
   @media (${query.mobile}) {
     padding: 26px 4px;
