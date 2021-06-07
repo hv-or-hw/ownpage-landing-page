@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import SwiperCore, { Pagination } from "swiper";
+import SwiperCore, { Autoplay, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.scss";
 import "swiper/components/pagination/pagination.scss";
@@ -24,11 +24,16 @@ const CarouselBlock = styled(Swiper)`
   }
 `;
 
-SwiperCore.use([Pagination]);
+SwiperCore.use([Pagination, Autoplay]);
 
 function Carousel({ children }) {
   return (
-    <CarouselBlock slidesPerView={1} pagination={{ clickable: true }}>
+    <CarouselBlock
+      slidesPerView={1}
+      pagination={{ clickable: true }}
+      loop={true}
+      autoplay={{ delay: 5000 }}
+    >
       {React.Children.map(children, (component) => (
         <SwiperSlide>{component}</SwiperSlide>
       ))}
