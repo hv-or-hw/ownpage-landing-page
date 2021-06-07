@@ -1,0 +1,29 @@
+{
+  "data": [
+    {
+      "name": "Golfskin",
+      "link": "http://www.golfskin.net/shop/main/index.php",
+      "image": "/assets/partner/golfskin.png"
+    },
+    {
+      "name": "Five Three Golf",
+      "link": "http://fivethreegolf.com/",
+      "image": "/assets/partner/five-three.jpg"
+    },
+    {
+      "name": "G-Union",
+      "link": "https://www.g-union.com/",
+      "image": "/assets/partner/g-union.jpg"
+    },
+    {
+      "name": "Breedpop",
+      "link": "http://breedpop.com/",
+      "image": "/assets/partner/breedpop.jpg"
+    },
+    {
+      "name": "Mediabro",
+      "link": "https://mediabro.co.kr/",
+      "image": "/assets/partner/mediabro.jpg"
+    }
+  ]
+}
