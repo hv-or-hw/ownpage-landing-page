@@ -59,7 +59,7 @@ const MenuBlock = styled.section`
     transition: height 0.3s ease-out;
 
     &.open {
-      height: 150px;
+      height: 194px;
     }
   }
 `;

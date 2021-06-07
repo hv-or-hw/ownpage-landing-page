@@ -3,9 +3,15 @@ import ContactPage from "./components/contact/ContactPage";
 import FaqPage from "./components/faq/FaqPage";
 import Footer from "./components/footer/Footer";
 import HomePage from "./components/home/HomePage";
+import PartnerPage from "./components/partner/PartnerPage";
 import Navigation from "./components/nav/Navigation";
 
 const links = [
+  {
+    name: "파트너",
+    href: "/partner",
+    type: "default",
+  },
   {
     name: "자주 묻는 질문",
     href: "/faq",
@@ -24,6 +30,7 @@ function App() {
       <Router>
         <Navigation logoSrc="/logo-tmp.png" links={links} />
         <Route exact path="/" component={HomePage} />
+        <Route path="/partner" component={PartnerPage} />
         <Route path="/faq" component={FaqPage} />
         <Route path="/contact" component={ContactPage} />
         <Footer logoSrc="/logo-tmp.png" />
