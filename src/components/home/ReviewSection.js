@@ -108,6 +108,7 @@ function ReviewSection({ title, description, children, background = "#fff" }) {
           slidesPerView="auto"
           centeredSlides={true}
           navigation={true}
+          loop={true}
           spaceBetween={16}
           autoplay={{
             delay: 5000,
