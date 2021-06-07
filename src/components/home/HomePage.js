@@ -19,7 +19,7 @@ function HomePage() {
         <CarouselSlide />
         <CarouselSlide />
       </Carousel>
-      <IllustSection illustSrc="/assets/home/illust-2.png">
+      <IllustSection illustSrc="/assets/home/illust-1.png">
         <h1>
           대충할 거면
           <br />
