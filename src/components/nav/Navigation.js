@@ -8,6 +8,7 @@ const NavigationBlock = styled.nav`
   position: sticky;
   top: 0;
   background-color: #fff;
+  z-index: 999;
 
   height: 80px;
   box-shadow: 0 1px 2px 0 rgba(41, 42, 43, 0.1);
