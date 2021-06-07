@@ -24,8 +24,17 @@ const InputTextElem = styled.input`
   border: solid 1px #ededf2;
   background-color: #fff;
 
+  &.warning {
+    border: solid 2px #e42939;
+  }
+
   &::placeholder {
     color: #cacaca;
+  }
+
+  &:focus {
+    outline: 0;
+    border: solid 2px #3dc277;
   }
 `;
 
@@ -40,9 +49,24 @@ const TextAreaElem = styled.textarea`
   border: solid 1px #ededf2;
   background-color: #fff;
 
+  &.warning {
+    border: solid 2px #e42939;
+  }
+
   &::placeholder {
     color: #cacaca;
   }
+
+  &:focus {
+    outline: 0;
+    border: solid 2px #3dc277;
+  }
+`;
+
+const WarningMessage = styled.p`
+  margin: 8px 0 0;
+  font-size: 14px;
+  color: #de2d3c;
 `;
 
 function InputText({
@@ -53,6 +77,7 @@ function InputText({
   placeholder = "",
   multiline = false,
   onChange,
+  warningMessage = "",
 }) {
   return (
     <InputTextBlock>
@@ -68,6 +93,7 @@ function InputText({
           required={required}
           value={value}
           onChange={onChange}
+          className={warningMessage.length > 0 ? "warning" : ""}
         />
       ) : (
         <InputTextElem
@@ -78,7 +104,11 @@ function InputText({
           placeholder={placeholder}
           required={required}
           onChange={onChange}
+          className={warningMessage.length > 0 ? "warning" : ""}
         />
+      )}
+      {warningMessage.length > 0 && (
+        <WarningMessage>{warningMessage}</WarningMessage>
       )}
     </InputTextBlock>
   );

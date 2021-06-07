@@ -117,6 +117,9 @@ function ContactForm({ onSubmit }) {
           required
           value={state.customer_name}
           onChange={onInputChange}
+          warningMessage={
+            state.customer_name.length === 0 ? "필수 입력 항목입니다." : ""
+          }
         />
         <InputText
           label="이메일 주소"
@@ -125,6 +128,9 @@ function ContactForm({ onSubmit }) {
           required
           value={state.customer_email}
           onChange={onInputChange}
+          warningMessage={
+            state.customer_email.length === 0 ? "필수 입력 항목입니다." : ""
+          }
         />
       </TwoColumnRow>
       <TwoColumnRow>
@@ -134,6 +140,9 @@ function ContactForm({ onSubmit }) {
           placeholder="연락처를 입력해주세요"
           required
           onChange={onInputChange}
+          warningMessage={
+            state.customer_tel.length === 0 ? "필수 입력 항목입니다." : ""
+          }
         />
         <InputText
           label="회사명"
