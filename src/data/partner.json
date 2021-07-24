@@ -24,6 +24,11 @@
       "name": "Mediabro",
       "link": "https://mediabro.co.kr/",
       "image": "/assets/partner/mediabro.jpg"
+    },
+    {
+      "name": "D-OOHS",
+      "link": "https://d-oohs.com/",
+      "image": "/assets/partner/d-oohs.jpg"
     }
   ]
 }
